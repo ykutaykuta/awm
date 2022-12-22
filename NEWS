@@ -1,0 +1,67 @@
+Overview of Changes in audiowmark-0.6.1:
+
+* improve speed detection/correction
+  - performance optimizations to make --detect-speed faster
+  - improve accuracy of speed detection
+  - make it work properly with short payload
+  - add second, slower / more accurate algorithm (--detect-speed-patient)
+* fix segfaults during hls-prepare (#11)
+* read all input if a process provides audio on stdin to avoid SIGPIPE (#19)
+* improve infrastructure for testing audiowmark
+  - run some scripts for 'make check' to ensure everything works correctly
+  - add CI which builds/tests audiowmark automatically using github actions
+  - support various sanitizer builds / STL C++ debug builds
+  - fix some issues triggered by sanitizers
+* add --strict option: provide strict and more permissive mode
+  - "input frames != output frames" is only an error if --strict is used
+  - enforce payload size if --strict is used
+* improve command line parsing error messages
+* documentation updates
+* minor fixes
+
+Overview of Changes in audiowmark-0.6.0:
+
+* implement speed detection/correction (--detect-speed)
+* Add '--json' CLI option for machine readable results.
+
+Overview of Changes in audiowmark-0.5.0:
+
+* support HTTP Live Streaming for audio/video streaming
+* fix floating point wav input
+* improve command line option handling (ArgParser)
+* support seeking on internal watermark state
+
+Overview of Changes in audiowmark-0.4.2:
+
+* compile fixes for g++-9 and clang++-10
+* add experimental support for short payload
+
+Overview of Changes in audiowmark-0.4.1:
+
+* initial public release
+
+Overview of Changes in audiowmark-0.4.0:
+
+* add initial video watermarking support (videowmark)
+
+Overview of Changes in audiowmark-0.3.0:
+
+* replace padding at start with a partial B block
+* add algorithm for decoding the watermark from short clips
+
+Overview of Changes in audiowmark-0.2.1:
+
+* add limiter to avoid clipping during watermark generation
+
+Overview of Changes in audiowmark-0.2.0:
+
+* support input/output streams
+* support raw streams
+* some performance optimizations
+* unified logging and --quiet option
+* improved mp3 detection to avoid false positives
+* split up watermarking source (wmadd/wmget/wmcommon)
+
+Overview of Changes in audiowmark-0.1.0:
+
+* initial release

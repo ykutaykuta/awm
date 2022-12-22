@@ -1,0 +1,11 @@
+speed detection possible improvements:
+- detect silence instead of total volume?
+- split big region into two smaller ones?
+- connected search on even smaller regions?
+
+possible improvements:
+- dynamic bit strength
+- merge infinite wav header generator
+
+videowmark:
+opus length ffprobe -show_format phil.mkv
